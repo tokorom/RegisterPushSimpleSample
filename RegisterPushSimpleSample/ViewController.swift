@@ -20,6 +20,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func registerUserNotificationSettings(sender: AnyObject) {
+        let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
+        UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
+    }
+    
+    @IBAction func registerForRemoteNotifications(sender: AnyObject) {
+        UIApplication.sharedApplication().registerForRemoteNotifications()
+    }
 }
 

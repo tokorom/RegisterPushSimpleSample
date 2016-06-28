@@ -41,6 +41,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings) {
+        print("application(_:didRegisterUserNotificationSettings:)")
+        print(notificationSettings)
+    }
+    
+    
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+        print("application(_:didFailToRegisterForRemoteNotificationsWithError:)")
+        print(error)
+    }
+    
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        print("application(_:didRegisterForRemoteNotificationsWithDeviceToken:)")
+        print(deviceToken)
+    }
 }
 
